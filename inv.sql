@@ -1,0 +1,369 @@
+-- phpMyAdmin SQL Dump
+-- version 5.0.4
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 09-06-2021 a las 00:15:31
+-- Versión del servidor: 10.4.16-MariaDB
+-- Versión de PHP: 7.4.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `inv`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `articulo`
+--
+
+CREATE TABLE `articulo` (
+  `cod_articulo` int(20) NOT NULL,
+  `descripcion` varchar(100) NOT NULL,
+  `cantidad` int(10) NOT NULL,
+  `fecha_reg1` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `articulo`
+--
+
+INSERT INTO `articulo` (`cod_articulo`, `descripcion`, `cantidad`, `fecha_reg1`) VALUES
+(3, 'PINZAS', 88, '03/06/21'),
+(4, 'CORTAFRIO', 36, '03/06/21'),
+(5, 'ALICATES', 58, '03/06/21'),
+(6, 'PONCHADORAS', 7, '03/06/21'),
+(7, 'DESOLDAPUG', 39, '03/06/21'),
+(8, 'FUENTES REGULADORAS', 21, '03/06/21'),
+(9, 'PELACABLES', 58, '03/06/21'),
+(10, 'DESTONILLADOR ESTRIA', 69, '03/06/21'),
+(11, 'DESTONILLADOR PALA', 182, '03/06/21'),
+(12, 'CAUTINES', 41, '03/06/21'),
+(13, 'PROTOBOARD', 54, '03/06/21'),
+(14, 'MARTILLOS', 10, '03/06/21'),
+(15, 'PIE DE REY', 9, '03/06/21'),
+(16, 'CINCELES', 13, '03/06/21'),
+(17, 'LIMAS', 26, '03/06/21'),
+(18, 'MULTIMETRO', 37, '03/06/21'),
+(21, 'RESISTENCIA 2,2K', 200, '03/06/21'),
+(22, 'RESISTENCIA 3,9K', 200, '03/06/21'),
+(23, 'RESISTENCIA 4,7K', 80, '03/06/21'),
+(24, 'RESISTENCIA 5,6K', 200, '03/06/21'),
+(25, 'RESISTENCIA 6,2K', 80, '03/06/21'),
+(26, 'RESISTENCIA 6,8K', 200, '03/06/21'),
+(27, 'RESISTENCIA 1K', 200, '03/06/21'),
+(28, 'RESISTENCIA 2K', 200, '03/06/21'),
+(29, 'RESISTENCIA 3K', 200, '03/06/21'),
+(30, 'RESISTENCIA 10K', 200, '03/06/21'),
+(31, 'RESISTENCIA 12K', 843, '03/06/21'),
+(33, 'RESISTENCIA 13k', 40, '03/06/21'),
+(34, 'RESISTENCIA 15K', 205, '03/06/21'),
+(35, 'RESISTENCIA 16K', 20, '03/06/21'),
+(36, 'RESISTENCIA 18K', 20, '03/06/21'),
+(37, 'RESISTENCIA 20K', 200, '03/06/21'),
+(38, 'RESISTENCIA 22K', 426, '03/06/21'),
+(39, 'RESISTECIA 24K', 116, '03/06/21'),
+(40, 'RESISTENCIA 27K', 895, '03/06/21'),
+(41, 'RESISTENCIA 33K', 200, '03/06/21'),
+(42, 'RESISTENCIA 36K', 60, '03/06/21'),
+(44, 'RESISTENCIA 39K', 60, '03/06/21'),
+(45, 'RESISTENCIA 43K', 200, '03/06/21'),
+(46, 'RESISTENCIA 47K', 200, '03/06/21'),
+(47, 'RESISTENCIA 51K', 200, '03/06/21'),
+(48, 'RESISTENCIA 56K', 40, '03/06/21'),
+(49, 'RESISTENCIA 62K', 200, '03/06/21'),
+(50, 'RESISTENCIA 78K', 200, '03/06/21'),
+(51, 'RESISTENCIA 100K', 200, '03/06/21'),
+(52, 'RESISTENCIA 120K', 200, '03/06/21'),
+(53, 'RESISTENCIA 150K', 150, '03/06/21'),
+(54, 'RESISTENCIA 180K', 180, '03/06/21'),
+(55, 'RESISTENCIA 220K', 220, '03/06/21'),
+(56, 'RESISTENCIA 330K', 80, '03/06/21'),
+(57, 'RESISTENCIA 390K', 499, '03/06/21'),
+(58, 'RESISTENCIA 470K', 800, '03/06/21'),
+(59, 'RESISTENCIA 560K', 190, '03/06/21'),
+(60, 'RESISTENCIA 620K', 40, '03/06/21'),
+(61, 'RESISTENCIA 680K', 200, '03/06/21'),
+(62, 'RESISTENCIA 750K', 40, '03/06/21'),
+(63, 'REISTENCIA 820K', 20, '03/06/21'),
+(64, 'RESISTENCIA1,2m', 10, '03/06/21'),
+(65, 'RESISTENCIA 1Ω', 302, '03/06/21'),
+(66, 'RESISTENCIA 1,5Ω', 499, '03/06/21'),
+(67, 'RESISTENCIA 1,8Ω', 105, '03/06/21'),
+(68, 'RESISTENCIA 2,2Ω', 40, '03/06/21'),
+(69, 'RESISTENCIA 2,7Ω', 200, '03/06/21'),
+(70, 'RESISTENCIA 3,3Ω', 200, '03/06/21'),
+(71, 'REISTENCIA 3,9Ω', 20, '03/06/21'),
+(72, 'RESISTENCIA 4,7Ω', 30, '03/06/21'),
+(73, 'RESISTENCIA 5,6Ω', 40, '03/06/21'),
+(74, 'RESISTENCIA 7,5mΩ', 200, '03/06/21'),
+(75, 'RESISTENCIA 8,2Ω', 30, '03/06/21'),
+(76, 'RESISTENCIA 10Ω', 200, '03/06/21'),
+(77, 'RESISTENCIA 12Ω', 10, '03/06/21'),
+(78, 'RESISTENCIA 15Ω', 20, '03/06/21'),
+(79, 'RESISTENCIA 18Ω', 20, '03/06/21'),
+(80, 'RESISTENCIA 20Ω', 200, '03/06/21'),
+(81, 'RESISTENCIA 22Ω', 400, '03/06/21'),
+(82, 'RESISTENCIA 27Ω', 200, '03/06/21'),
+(83, 'RESISTENCIA 39Ω', 371, '03/06/21'),
+(84, 'RESISTENCIA 47Ω', 200, '03/06/21'),
+(85, 'RESISTENCIA 51Ω', 200, '03/06/21'),
+(86, 'RESISTENCIA 56Ω', 599, '03/06/21'),
+(87, 'RESISTENCIA 68Ω', 10, '03/06/21'),
+(88, 'RESISTENCIA 82Ω', 10, '03/06/21'),
+(89, 'RESISTENCIA 110Ω', 200, '03/06/21'),
+(90, 'RESISTENCIA 130Ω', 50, '03/06/21'),
+(91, 'RESISTENCIA 150Ω', 200, '03/06/21'),
+(92, 'RESISTENCIA 200Ω', 200, '03/06/21'),
+(93, 'RESISTENCIA 220Ω', 400, '03/06/21'),
+(94, 'RESISTENCIA 270Ω', 200, '03/06/21'),
+(95, 'RESISTENCIA 330Ω', 200, '03/06/21'),
+(96, 'RESISTENCIA 390Ω', 200, '03/06/21'),
+(97, 'RESISTENCIA 560Ω', 200, '03/06/21'),
+(98, 'RESISTENCIA 680Ω', 200, '03/06/21'),
+(99, 'RESISTENCIA 750Ω', 40, '03/06/21'),
+(100, 'RESISTENCIA 820Ω', 20, '03/06/21'),
+(101, 'RESISTENCIA P. 180Ω-20W', 110, '03/06/21'),
+(102, 'RESISTENCIA P. 22Ω-20W', 50, '03/06/21'),
+(103, 'RESISTENCIA P. 47Ω-20W', 50, '03/06/21'),
+(104, 'RESISTENCIA P. 500Ω-20W', 80, '03/06/21'),
+(105, 'RESISTENCIA P. 10W-10RJ', 40, '03/06/21'),
+(106, 'RESISTENCIA P. 5W-33RJ', 60, '03/06/21'),
+(107, 'RESISTENCIA P. 20W-47RJ', 50, '03/06/21'),
+(108, 'RESISTENCIA 180Ω', 200, '03/06/21'),
+(109, 'RESISTENCIA 5KΩ', 200, '03/06/21'),
+(110, 'DIODOS LED AMARILLOS ', 300, '03/06/21'),
+(111, 'DIODOS LED ROJOS', 300, '03/06/21'),
+(112, 'DIODOS ZENER 8V', 200, '03/06/21'),
+(113, 'DIODOS ZENER 14V', 200, '03/06/21'),
+(114, 'DIODOS ZENER 5,8V', 200, '03/06/21'),
+(115, 'DIODO 1N4004', 200, '03/06/21'),
+(116, 'DIODO 1N4148', 200, '03/06/21'),
+(117, 'FOTO DIODO INFREROJO', 10, '03/06/21'),
+(118, 'FOTO RESISTENCIA', 200, '03/06/21'),
+(119, 'COMPUERTA 7408', 200, '03/06/21'),
+(120, 'COMPUERTA 74132', 20, '03/06/21'),
+(121, 'COMPUERTA 7400', 200, '03/06/21'),
+(122, 'COMPUERTA 7432', 20, '03/06/21'),
+(123, 'COMPUERTA 7404', 200, '03/06/21'),
+(124, 'COMPUERTA 7448', 20, '03/06/21'),
+(125, 'COMPUERTA 7486', 20, '03/06/21'),
+(126, 'COMPUERTA 7427', 200, '03/06/21'),
+(127, 'COMPUERTA 7411', 200, '03/06/21'),
+(128, 'COMPUERTA 7415', 200, '03/06/21'),
+(129, 'COMPUERTA 7421', 200, '03/06/21'),
+(130, 'COMPUERTA 7447', 20, '03/06/21'),
+(131, 'COMPUERTA 7448', 20, '03/06/21'),
+(132, 'COMPUERTA 7473', 20, '03/06/21'),
+(133, 'COMPUERTA 7474', 20, '03/06/21'),
+(134, 'COMPUERTA 7476', 20, '03/06/21'),
+(135, 'COMPUERTA 7483', 20, '03/06/21'),
+(136, 'COMPUERTA 7410', 20, '03/06/21'),
+(137, 'COMPUERTA 7485', 20, '03/06/21'),
+(138, 'COMPUERTA 7489', 20, '03/06/21'),
+(139, 'COMPUERTA 7490', 200, '03/06/21'),
+(140, 'COMPUERTA 7493', 20, '03/06/21'),
+(141, 'COMPUERTA 74221', 20, '03/06/21'),
+(142, 'COMPUERTA 74266', 20, '03/06/21'),
+(143, 'COMPUERTA 74138', 20, '03/06/21'),
+(144, 'COMPUERTA 74279', 20, '03/06/21'),
+(145, 'COMPUERTA 74373', 20, '03/06/21'),
+(146, 'COMPUERTA 74393', 20, '03/06/21'),
+(147, 'COMPUERTA 74153', 20, '03/06/21'),
+(148, 'COMPUERTA 74154', 20, '03/06/21'),
+(149, 'COMPUERTA 74161', 20, '03/06/21'),
+(150, 'COMPUERTA 74164', 200, '03/06/21'),
+(151, 'COMPUERTA 74173', 200, '03/06/21'),
+(152, 'COMPUERTA 74174', 200, '03/06/21'),
+(153, 'COMPUERTA 74926', 200, '03/06/21'),
+(154, 'COMPUERTA 17358', 200, '03/06/21'),
+(155, 'COMPUERTA 74139', 20, '03/06/21'),
+(156, 'COMPUERTA 74145', 20, '03/06/21'),
+(157, 'COMPUERTA 74151', 20, '03/06/21'),
+(158, 'COMPUERTA 74190', 200, '03/06/21'),
+(159, 'COMPUERTA 74192', 200, '03/06/21'),
+(160, 'COMPUERTA 74193', 200, '03/06/21'),
+(161, 'COMPUERTA 0808', 20, '03/06/21'),
+(162, 'COMPUERTA 2708', 200, '03/06/21'),
+(163, 'COMPUERTA 2732', 20, '03/06/21'),
+(164, 'COMPUERTA 4040', 20, '03/06/21'),
+(165, 'COMPUERTA 4049', 20, '03/06/21'),
+(166, 'COMPUERTA 4069', 20, '03/06/21'),
+(167, 'COMPUERTA 4380', 200, '03/06/21'),
+(168, 'COMPUERTA 4511', 20, '03/06/21'),
+(170, 'COMPUERTA 6116', 20, '03/06/21'),
+(171, 'COMPUERTA 4070', 20, '03/06/21'),
+(172, 'COMPUERTA 4071', 20, '03/06/21'),
+(173, 'COMPUERTA 4081', 20, '03/06/21'),
+(174, 'COMPUERA 4017', 20, '03/06/21'),
+(175, 'COMPUERTA 4027', 20, '03/06/21'),
+(176, 'COMPUERTA 555', 200, '03/06/21'),
+(177, 'TALADROS', 3, '03/06/21'),
+(178, 'PISTOLAS DE COLOR', 3, '03/06/21'),
+(180, 'GENERADOR DE SEÑAL', 2, '03/06/21'),
+(181, 'OSCILOSCOPIO', 5, '03/06/21'),
+(182, 'TESTER', 44, '03/06/21'),
+(183, 'PARLANTES', 39, '03/06/21'),
+(184, 'INTERRUPTORES', 119, '03/06/21'),
+(185, 'BREKER', 14, '03/06/21'),
+(186, 'DVD', 2, '03/06/21'),
+(187, 'BOMBILLAS 60W', 200, '03/06/21'),
+(188, 'ARDUINO 1', 80, '03/06/21'),
+(189, 'CONDENSADOR 2200uf', 100, '07/06/21'),
+(190, 'CONDENSADOR 0,47uf', 90, '07/06/21'),
+(191, 'CONDENSADOR 100uf', 100, '07/06/21'),
+(192, 'CONDENSADOR 472K', 20, '07/06/21'),
+(193, 'CONDENSADOR 1000uf', 60, '07/06/21'),
+(194, 'CONDENSADOR 222', 40, '07/06/21'),
+(195, 'CONDENSADOR 223', 60, '07/06/21'),
+(196, 'CONDENSADOR 332K', 20, '07/06/21'),
+(197, 'CONDENSADOR 334K', 20, '07/06/21'),
+(198, 'CONDENSADOR 470uf', 20, '07/06/21'),
+(199, 'CONDESADOR 22uf', 30, '07/06/21'),
+(200, 'CONDENSADOR 330uf', 30, '07/06/21'),
+(201, 'CONDENSADOR 4700uf', 40, '07/06/21'),
+(202, 'CONDENSADOR 10uf', 20, '07/06/21'),
+(203, 'CONDENSADOR 220uf', 30, '07/06/21'),
+(204, 'CONDENSADOR 47uf', 10, '07/06/21'),
+(205, 'CONDENSADOR 3300uf', 30, '07/06/21'),
+(206, 'CONDENSADOR CERAMICA 0.1', 10, '07/06/21'),
+(207, 'CONDENSADOR CERAMICA 104', 30, '07/06/21'),
+(208, 'CONDENSADOR 3.3uf', 10, '07/06/21'),
+(209, 'CONDENSADOR CERAMICA 4.7', 10, '07/06/21'),
+(210, 'CONDENSADOR 2.2uf', 10, '07/06/21'),
+(211, 'CONDENSADOR 33uf', 30, '07/06/21'),
+(212, 'PULSADORES N.A', 10, '07/06/21'),
+(213, 'PULSADORES N.C', 10, '07/06/21'),
+(214, 'CONDENSADOR 0.1uf', 10, '07/06/21'),
+(215, 'POTENCIOMETRO 50K', 20, '07/06/21'),
+(216, 'POTENCIOMETRO 500K', 5, '07/06/21'),
+(217, 'POTENCIOMETRO 1m', 200, '07/06/21'),
+(218, 'POTENCIOMETRO 250K', 30, '07/06/21'),
+(219, 'POTENCIOMETRO 100K', 40, '07/06/21'),
+(220, 'POTENCIOMETRO 1K', 8, '07/06/21'),
+(221, 'DISPLAY A.C', 20, '07/06/21'),
+(222, 'DISPLAY C.C', 20, '07/06/21');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `estudiante`
+--
+
+CREATE TABLE `estudiante` (
+  `id` int(11) NOT NULL,
+  `nombre` text NOT NULL,
+  `grado` text NOT NULL,
+  `correo` text NOT NULL,
+  `fecha_reg` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `login`
+--
+
+CREATE TABLE `login` (
+  `id` int(11) NOT NULL,
+  `user` varchar(250) NOT NULL,
+  `password` varchar(250) NOT NULL,
+  `email` varchar(250) NOT NULL,
+  `pasadmin` varchar(250) NOT NULL,
+  `rol` int(3) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `login`
+--
+
+INSERT INTO `login` (`id`, `user`, `password`, `email`, `pasadmin`, `rol`) VALUES
+(1, 'Administrador electronica', '', 'administrador@gmail.com', 'electronica\r\n', 1),
+(6, 'electronica', 'electronica', 'electronica@gmail.com', '', 2),
+(7, 'luis', 'luis', 'luis@gmail.com', 'luis', 2);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `prestamo`
+--
+
+CREATE TABLE `prestamo` (
+  `cod_prestamo` int(20) NOT NULL,
+  `id_estudiante` int(20) NOT NULL,
+  `grado` int(20) NOT NULL,
+  `cod_articulo` int(20) NOT NULL,
+  `cantidad` int(20) NOT NULL,
+  `fecha_reg` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `articulo`
+--
+ALTER TABLE `articulo`
+  ADD PRIMARY KEY (`cod_articulo`);
+
+--
+-- Indices de la tabla `estudiante`
+--
+ALTER TABLE `estudiante`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `login`
+--
+ALTER TABLE `login`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indices de la tabla `prestamo`
+--
+ALTER TABLE `prestamo`
+  ADD PRIMARY KEY (`cod_prestamo`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `articulo`
+--
+ALTER TABLE `articulo`
+  MODIFY `cod_articulo` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=223;
+
+--
+-- AUTO_INCREMENT de la tabla `estudiante`
+--
+ALTER TABLE `estudiante`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT de la tabla `login`
+--
+ALTER TABLE `login`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT de la tabla `prestamo`
+--
+ALTER TABLE `prestamo`
+  MODIFY `cod_prestamo` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
